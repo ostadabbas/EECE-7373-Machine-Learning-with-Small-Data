@@ -1,4 +1,4 @@
-# EECE 7398: Machine Learning with Small Data
+# EECE 7373: Machine Learning with Small Data
 
 ## Leveraging the Explorer Cluster -- Now With Agentic Workflows
 
@@ -9,7 +9,7 @@
 
 ## Overview
 
-This repository contains the materials for **EECE 7398: Machine Learning with Small Data**. The
+This repository contains the materials for **EECE 7373: Machine Learning with Small Data**. The
 course uses Northeastern's **Explorer Cluster** (Rocky Linux 9.3, NVIDIA H200 GPUs) for
 hands-on ML experiments, and increasingly expects students to operate that cluster together with
 an AI coding agent (Claude Code, Codex, etc.) rather than by typing every command by hand.
