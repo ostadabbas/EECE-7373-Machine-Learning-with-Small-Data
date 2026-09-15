@@ -7,9 +7,26 @@ description: Operate Northeastern's Explorer SLURM cluster for EECE 7398 coursew
 
 This file is written so a coding agent (Claude Code, Codex, etc.) can read it and operate the
 cluster on your behalf -- submit jobs, watch them, tail logs, and report back -- without you
-typing every SLURM command by hand. Copy this file into your own project as
-`.claude/skills/SKILL.md` (or `.codex/skills/explorer-cluster/SKILL.md`) and fill in the
-placeholders below with your own username and paths.
+typing every SLURM command by hand. It's a **template**: the pattern (connection facts, common
+commands, active runs, guardrails) generalizes to any SLURM cluster (Explorer, Discovery, AICR,
+a lab server), not just this course's.
+
+## Quickstart: make this your own project's SKILL.md
+
+1. Copy this file into your project as `.claude/skills/SKILL.md` (project-local) or
+   `~/.claude/skills/<cluster-name>/SKILL.md` (global, if you use the same cluster across
+   multiple projects).
+2. Set up passwordless SSH once (below), then replace every `your-username`,
+   `your-project`, and path placeholder in this file with your real values.
+3. Fill in **Filesystem layout** and **Common operations** with your project's actual paths and
+   `sbatch` script names.
+4. Keep it updated as you go -- add an **Active runs** table (run name, purpose, status, key
+   path) once you have real jobs going. Treat this file as required infrastructure your agent
+   reads every session, not one-off documentation.
+5. Point your agent at it explicitly the first time (e.g. "read `.claude/skills/SKILL.md` before
+   doing anything on the cluster") -- most agents also auto-discover skills in that path.
+6. There's a runnable, cell-by-cell version of the setup steps below (SSH key, `.env`,
+   copying this template) in [`Exercises/agentic_cluster_workflow.ipynb`](Exercises/agentic_cluster_workflow.ipynb).
 
 ## Connection facts
 
